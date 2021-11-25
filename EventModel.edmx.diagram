@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d50840604d3a44ceb269d2045261c557" Name="Diagram1">
+        <EntityTypeShape EntityType="EventsModel.events" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventsModel.federal_districts" Width="1.5" PointX="1.5" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventsModel.message_categories" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventsModel.message_processing" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventsModel.messages" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventsModel.popular_group" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventsModel.popular_messages" Width="1.5" PointX="5.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventsModel.Role" Width="1.5" PointX="7.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventsModel.staff" Width="1.5" PointX="3" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventsModel.staff_event" Width="1.5" PointX="6" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventsModel.status_message" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventsModel.type_message" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventsModel.type_staff" Width="1.5" PointX="0.75" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventsModel.user" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <AssociationConnector Association="EventsModel.FK_messages_events" ManuallyRouted="false" />
+        <AssociationConnector Association="EventsModel.FK_staff_event_events" ManuallyRouted="false" />
+        <AssociationConnector Association="EventsModel.FK_user_federal_districts" ManuallyRouted="false" />
+        <AssociationConnector Association="EventsModel.FK_messages_message_categories" ManuallyRouted="false" />
+        <AssociationConnector Association="EventsModel.FK_message_processing_messages" ManuallyRouted="false" />
+        <AssociationConnector Association="EventsModel.FK_message_processing_staff" ManuallyRouted="false" />
+        <AssociationConnector Association="EventsModel.FK_message_processing_status_message" ManuallyRouted="false" />
+        <AssociationConnector Association="EventsModel.FK_messages_type_message" ManuallyRouted="false" />
+        <AssociationConnector Association="EventsModel.FK_messages_user" ManuallyRouted="false" />
+        <AssociationConnector Association="EventsModel.FK_popular_messages_messages" ManuallyRouted="false" />
+        <AssociationConnector Association="EventsModel.FK_popular_messages_popular_group" ManuallyRouted="false" />
+        <AssociationConnector Association="EventsModel.FK_staff_event_staff" ManuallyRouted="false" />
+        <AssociationConnector Association="EventsModel.FK_staff_type_staff" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

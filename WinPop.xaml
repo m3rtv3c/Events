@@ -1,0 +1,39 @@
+﻿<Window x:Class="Events.WinPop"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Events"
+        mc:Ignorable="d"
+        Title="WinPop" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="160"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Name="PopMessage" Content="Популярные обращения" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" Margin="20"/>
+        <TextBlock Name="TextBlockEvent" Grid.ColumnSpan="2" Margin="20" ></TextBlock>
+        <ComboBox Name="СomboBoxPopular" Margin="20" Grid.Row="2"  DisplayMemberPath="Content" SelectedIndex="0"  ></ComboBox>
+        <DataGrid Name="DataGridPopMesssage" Grid.Row="3" AutoGenerateColumns="False"  >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Популярная группа " Binding="{Binding PopularGroup.Content}" CanUserSort="True"></DataGridTextColumn>
+                <DataGridTextColumn Header="Обращение" Binding="{Binding Message.MessageText}" Width="200"></DataGridTextColumn>
+                <DataGridTextColumn Header="Федеральный округ" Binding="{Binding Messages.User.FederalDistricts.FederalDistricts1}" CanUserSort="True"></DataGridTextColumn>
+                <DataGridTextColumn Header="Голосов" Binding="{Binding Vote}" CanUserSort="True"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="ButtontListBack" Grid.Row="4" Margin="32,10,270,10" Content="Назад" />
+        <Button Name="ButtonListForward" Grid.Row="4" Margin="282,9,20,10" Content="Вперед"/>
+        <Button Name="ButtonVote" Grid.Column="1" Grid.Row="2" Margin="20" Content="Голосовать"/>
+        <MediaElement Name="MediaElimentVideo" Grid.Column="1" Grid.Row="3"/>
+        <TextBlock Name="TextBlockErrorLog" Grid.Column="1" Margin="20" Grid.Row="4"/>
+        
+    </Grid>
+</Window>

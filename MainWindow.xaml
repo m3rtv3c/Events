@@ -1,0 +1,38 @@
+﻿<Window x:Class="Events.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Events"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <ComboBox Name="ComboBoxEvents" Margin="20" DisplayMemberPath="Name" SelectionChanged="ComboBoxEvents_SelectionChanged" ></ComboBox>
+            <TextBlock Grid.Column="1" Name="TextBlockEvents" Margin="20" Grid.ColumnSpan="2" ></TextBlock>
+            <TextBlock Grid.Column="1" Name="TextBlockEventsStatus" Grid.Row="1" Margin="20" ></TextBlock>
+            <TextBox Name="TextBoxLogin" Grid.Column="2" Grid.Row="1" Margin="20"  ></TextBox>
+            <TextBlock Name="TextBoxEventDescription" Grid.Column="0" Grid.Row="2" Grid.RowSpan="2" Margin="15"></TextBlock>
+            <Button Name="ButtonNewMessage" Margin="20 " Click="ButtonNewMessage_Click" Grid.Row="2" Grid.Column="1" Content="Подать обращение"  ></Button>
+            <Button Name="ButtonPopularMessages" Margin="20"  Grid.Row="3" Grid.Column="1" Content="Популярные обращения" Click="ButtonPopularMessages_Click" ></Button>
+            <PasswordBox Name="PasswordBoxPassword" Margin="20" Grid.Column="2" Grid.Row="2" ></PasswordBox>
+            <Button Name="ButtonLogin" Margin="20" Grid.Column="2" Grid.Row="3" Content="Вход сотрудника" ></Button>
+            <TextBlock Name="TextBlockErrorLog" Grid.Row="4" Margin="20" Grid.ColumnSpan="2" ></TextBlock>
+            <TextBlock Name="TextBlockFooter" Margin="20" Grid.Row="6" Grid.ColumnSpan="3"  ></TextBlock>
+
+        </Grid>
+    </Grid>
+</Window>
