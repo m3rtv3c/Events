@@ -85,12 +85,12 @@ namespace Events
                 {
                     MessageBox.Show("Просмотр популярных сообщения доступна только для прошедших, или текущих мероприятий", "Популярные сообщения", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
-            }
+        }
             catch
             {
                 MessageBox.Show("Просмотр популярных сообщения доступна только для прошедших, или текущих мероприятий", "Популярные сообщения", MessageBoxButton.OK, MessageBoxImage.Information);
             }
-        }
+}
     }
 }
 

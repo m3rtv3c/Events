@@ -20,13 +20,14 @@
         </Grid.RowDefinitions>
         <Label Name="PopMessage" Content="Популярные обращения" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" Margin="20"/>
         <TextBlock Name="TextBlockEvent" Grid.ColumnSpan="2" Margin="20" ></TextBlock>
-        <ComboBox Name="СomboBoxPopular" Margin="20" Grid.Row="2"  DisplayMemberPath="Content" SelectedIndex="0"  ></ComboBox>
+        <ComboBox Name="СomboBoxPopular" Margin="20,19.6,255,20.2" Grid.Row="2"  DisplayMemberPath="Content" SelectedIndex="-1" SelectionChanged="СomboBoxPopular_SelectionChanged"  ></ComboBox>
+        <Button Name="ButtonUndo" Content="Отменить фильтрацию" Grid.Row="2" Margin="282,19.6,20,20.2" Click="ButtonUndo_Click" ></Button>
         <DataGrid Name="DataGridPopMesssage" Grid.Row="3" AutoGenerateColumns="False"  >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Популярная группа " Binding="{Binding PopularGroup.Content}" CanUserSort="True"></DataGridTextColumn>
-                <DataGridTextColumn Header="Обращение" Binding="{Binding Message.MessageText}" Width="200"></DataGridTextColumn>
-                <DataGridTextColumn Header="Федеральный округ" Binding="{Binding Messages.User.FederalDistricts.FederalDistricts1}" CanUserSort="True"></DataGridTextColumn>
-                <DataGridTextColumn Header="Голосов" Binding="{Binding Vote}" CanUserSort="True"></DataGridTextColumn>
+                <DataGridTextColumn Header="Популярная группа " Binding="{Binding popular_group.Content}" CanUserSort="True"></DataGridTextColumn>
+                <DataGridTextColumn Header="Обращение" Binding="{Binding messages.message_text}" Width="200"></DataGridTextColumn>
+                <DataGridTextColumn Header="Федеральный округ" Binding="{Binding messages.user.federal_districts.federal_districts1}" CanUserSort="True"></DataGridTextColumn>
+                <DataGridTextColumn Header="Голосов" Binding="{Binding vote}" CanUserSort="True"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
         <Button Name="ButtontListBack" Grid.Row="4" Margin="32,10,270,10" Content="Назад" />
